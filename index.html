@@ -42,7 +42,7 @@
 
             canvas.onmousedown = (e) => {
                 painting = true
-                last= [e.clientX, e,clientY]
+                last= [e.clientX, e.clientY]
             }
             
             canvas.onmousemove = (e) => {
@@ -64,23 +64,7 @@
             ctx.stroke();
         }
         
-        canvas.onmousemove = (e) => {
-            if (painting === true) {
-                ctx.beginPath();
-                ctx.arc(e.clientX, e.clientY, 10, 0, 2 * Math.PI);
-                ctx.stroke();
-                ctx.fill();
-            } else {
-                console.log('什么都不做')
-            }
-        }
-
-        canvas.onmouseup = () => {
-            painting = false
-        }
         
-
-
     </script>
 </body>
 
